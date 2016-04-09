@@ -1,5 +1,5 @@
 /**
- * User.js
+ * Devpool.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -8,22 +8,16 @@
 module.exports = {
 
   attributes: {
-    first_name: {
-      type: 'string'
-    },
-    last_name: {
-      type: 'string'
-    },
-    username: {
+    name: {
       type: 'string',
+      required: true
     },
-    github_id: {
+    playlist: {
       type: 'string'
     },
-    devpools: {
-      collection: 'devpool',
-      via: 'users',
-      dominant: true
+    users: {
+      collection: 'user',
+      via: 'devpools'
     }
   }
 };
