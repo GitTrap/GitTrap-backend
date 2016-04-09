@@ -4,9 +4,6 @@
  * @description :: Server-side logic for managing githubs
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */ //find, create, update, destroy
-
-
-
  var GitHubApi = require("github"),
     github = new GitHubApi({
        // required
@@ -30,15 +27,24 @@ github.authenticate({
 
 module.exports = {
   test: function(req, res){
-    github.user.getFrom({
-        // optional:
-        // headers: {
-        //     "cookie": "blahblah"
-        // },
-        user: "darkfadr"
-    }, function(err, data) {
-      res.json(data);
-    });
+    Devpool.find({})
+      .populate('users')
+      .exec((err, pools) => {
+        console.log(pools);
+        pools.forEach(pool => {
+          pool.users.map(user => {
+            var usr;
+            github.user.getFrom({
+                user: "darkfadr"
+            }, function(err, data) {
+              usr = data
+            });
+
+            return usr;
+          });
+        });
+        return pools;
+      });
   }
 };
 
