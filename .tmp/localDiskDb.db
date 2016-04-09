@@ -1,23 +1,37 @@
 {
   "data": {
-    "devpool": [],
-    "user": [
+    "devpool": [
       {
-        "username": "darkfadr",
-        "first_name": "Ashley",
-        "last_name": "Narcisse",
-        "github_id": "github_fake_id",
-        "createdAt": "2016-04-09T15:25:10.465Z",
-        "updatedAt": "2016-04-09T15:25:10.465Z",
+        "name": "Trapathon Trappers",
+        "createdAt": "2016-04-09T17:32:30.592Z",
+        "updatedAt": "2016-04-09T17:32:30.592Z",
         "id": 1
       },
       {
-        "username": "kennetpostigo",
-        "first_name": "Kennet",
-        "last_name": "Postigo",
-        "github_id": "github_fake_id",
-        "createdAt": "2016-04-09T15:27:23.256Z",
-        "updatedAt": "2016-04-09T15:27:23.256Z",
+        "name": "Delta Force",
+        "createdAt": "2016-04-09T17:32:43.078Z",
+        "updatedAt": "2016-04-09T17:32:43.078Z",
+        "id": 2
+      }
+    ],
+    "user": [
+      {
+        "username": "jonycodes",
+        "devpool": "1",
+        "createdAt": "2016-04-09T17:41:36.611Z",
+        "updatedAt": "2016-04-09T17:41:36.611Z",
+        "id": 3
+      }
+    ],
+    "devpool_users__user_devpools": [
+      {
+        "devpool_users": 1,
+        "user_devpools": 1,
+        "id": 1
+      },
+      {
+        "devpool_users": 2,
+        "user_devpools": 1,
         "id": 2
       }
     ],
@@ -98,6 +112,12 @@
   },
   "counters": {
     "user": {
+      "id": 3
+    },
+    "devpool": {
+      "id": 2
+    },
+    "devpool_users__user_devpools": {
       "id": 2
     },
     "devpool": {},
