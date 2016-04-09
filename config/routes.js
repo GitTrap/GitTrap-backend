@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,10 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+  'get /github/:username' : 'GithubController.user',
+  'get /github/:username/repos': 'GithubController.repos',
+  'get /github/commits/:repo': 'GithubController.commits'
+
 
 };
