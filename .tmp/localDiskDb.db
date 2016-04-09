@@ -1,0 +1,57 @@
+{
+  "data": {
+    "user": [
+      {
+        "username": "darkfadr",
+        "first_name": "Ashley",
+        "last_name": "Narcisse",
+        "github_id": "github_fake_id",
+        "createdAt": "2016-04-09T15:25:10.465Z",
+        "updatedAt": "2016-04-09T15:25:10.465Z",
+        "id": 1
+      },
+      {
+        "username": "kennetpostigo",
+        "first_name": "Kennet",
+        "last_name": "Postigo",
+        "github_id": "github_fake_id",
+        "createdAt": "2016-04-09T15:27:23.256Z",
+        "updatedAt": "2016-04-09T15:27:23.256Z",
+        "id": 2
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "first_name": {
+        "type": "string"
+      },
+      "last_name": {
+        "type": "string"
+      },
+      "username": {
+        "type": "string"
+      },
+      "github_id": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 2
+    }
+  }
+}
