@@ -77,5 +77,13 @@ module.exports = {
    */
   getPlaylistUser: function(req, res) {
     res.json(playlistUser)
-  }
+  },
+	/**
+	 * follow auth user to the playlist
+	 *
+	 * @description :: gets the current user and logs selects the playlists from the user
+	 */
+	//  followPlaylist: function(req, res){
+	// 	 req.param('user');
+	//  }
 };
