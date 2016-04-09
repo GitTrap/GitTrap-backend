@@ -1,5 +1,6 @@
 {
   "data": {
+    "devpool": [],
     "user": [
       {
         "username": "darkfadr",
@@ -19,9 +20,30 @@
         "updatedAt": "2016-04-09T15:27:23.256Z",
         "id": 2
       }
-    ]
+    ],
+    "devpool_users__user_devpools": []
   },
   "schema": {
+    "devpool": {
+      "name": {
+        "type": "string"
+      },
+      "playlist": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "user": {
       "first_name": {
         "type": "string"
@@ -47,11 +69,35 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "devpool_users__user_devpools": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "devpool_users": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "devpool",
+        "on": "id",
+        "via": "user_devpools"
+      },
+      "user_devpools": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "devpool_users"
+      }
     }
   },
   "counters": {
     "user": {
       "id": 2
-    }
+    },
+    "devpool": {},
+    "devpool_users__user_devpools": {}
   }
 }
