@@ -28,8 +28,8 @@ module.exports = {
   callback: function(req, res) {
     spotifyApi.authorizationCodeGrant(req.param('code'))
       .then(function(data) {
-        spotifyApi.setAccessToken(data.body['access_token']);
-        spotifyApi.setRefreshToken(data.body['refresh_token']);
+        spotifyApi.setAccessToken(data.body.access_token);
+        spotifyApi.setRefreshToken(data.body.refresh_token);
         res.redirect('/spotify/splaylist')
       }, function(err) {
         res.serverError();
@@ -77,13 +77,5 @@ module.exports = {
    */
   getPlaylistUser: function(req, res) {
     res.json(playlistUser)
-  },
-	/**
-	 * follow auth user to the playlist
-	 *
-	 * @description :: gets the current user and logs selects the playlists from the user
-	 */
-	//  followPlaylist: function(req, res){
-	// 	 req.param('user');
-	//  }
+  }
 };

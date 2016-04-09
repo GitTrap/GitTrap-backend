@@ -23,18 +23,6 @@
         "id": 3
       }
     ],
-    "devpool_users__user_devpools": [
-      {
-        "devpool_users": 1,
-        "user_devpools": 1,
-        "id": 1
-      },
-      {
-        "devpool_users": 2,
-        "user_devpools": 1,
-        "id": 2
-      }
-    ],
     "devpool_users__user_devpools": []
   },
   "schema": {
@@ -117,10 +105,6 @@
     "devpool": {
       "id": 2
     },
-    "devpool_users__user_devpools": {
-      "id": 2
-    },
-    "devpool": {},
     "devpool_users__user_devpools": {}
   }
 }
