@@ -48,7 +48,7 @@ module.exports = {
           .then(function(data) {
             res.json(data.body);
           }, function(err) {
-            res.json(err);
+            res.send(err);
           });
       }, function(err) {
         res.send('Coul not find user');
