@@ -27,32 +27,25 @@ github.authenticate({
 module.exports = {
   user: function(req, res){
     github.user.getFrom({
-        user: req.params.username || 'darkfadr'
+      user: req.params.username || 'darkfadr'
     }, (err, data) => {
       res.json(data);
     });
   },
-  repos: function(req, res){
+  repos(req, res){
     github.repos.getFromUser({
       user: req.params.username || 'darkfadr'
     }, (err, data) => {
       res.json(data);
     });
   },
-  commits: function(req, res){
-    github.repos.getCommits({
-      user: 'darkfadr',
-      repo: 'algorithms'
+  stats: function(req, res){
+    github.repos.getStatsCommitActivity({
+      user: req.params.username || 'darkfadr',
+      repo: req.params.repo || 'floridatechhack'
     }, (err, data) => {
       res.json(data);
     });
-  },
-  test: function(req, res){
-    Devpool.find({})
-      .populate('users')
-      .exec((err, pools) => {
-        res.json(pools);
-      });
   }
 };
 

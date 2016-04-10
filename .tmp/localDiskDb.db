@@ -21,6 +21,13 @@
         "createdAt": "2016-04-09T17:41:36.611Z",
         "updatedAt": "2016-04-09T17:41:36.611Z",
         "id": 3
+      },
+      {
+        "username": "jonycodes",
+        "devpool": "1",
+        "createdAt": "2016-04-10T01:02:57.515Z",
+        "updatedAt": "2016-04-10T01:02:57.515Z",
+        "id": 4
       }
     ],
     "devpool_users__user_devpools": [
@@ -108,7 +115,7 @@
   },
   "counters": {
     "user": {
-      "id": 3
+      "id": 4
     },
     "devpool": {
       "id": 2
