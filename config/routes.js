@@ -47,6 +47,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   'post /dashboard': 'UserController.dashboard',
+  'post /challenge' : 'challengeController.getChallenge',
   'get /user/events/:username': 'UserController.events',
   // 'post /devpool/add': '',
 

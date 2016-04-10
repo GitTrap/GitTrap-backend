@@ -8,17 +8,23 @@
 module.exports = {
 
   attributes: {
-    description:{
-      type: 'text'
-    },
-    challenger:{
-      type: 'string'
-    },
-    challengees:{
+    description: {
       type: 'array'
     },
-    devpool:{
-      collection:'devpool',
+    points: {
+      type: 'number'
+    },
+    retrieves: {
+      type: 'array'
+    },
+    username: {
+      type: 'string'
+    },
+    challengees: {
+      type: 'array'
+    },
+    devpool: {
+      collection: 'devpool',
       via: 'challenges'
     }
   }
