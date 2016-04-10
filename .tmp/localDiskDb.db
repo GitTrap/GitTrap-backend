@@ -71,7 +71,7 @@
     "user": [
       {
         "username": "jonycodes",
-        "photo_url" : "https://avatars.githubusercontent.com/u/13911839?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/13911839?v=3",
         "devpool": [],
         "createdAt": "2016-04-09T17:41:36.611Z",
         "updatedAt": "2016-04-09T17:41:36.611Z",
@@ -79,18 +79,17 @@
       },
       {
         "username": "kennetpostigo",
-        "photo_url" : "https://avatars.githubusercontent.com/u/8888991?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/13911839?v=3",
         "devpool": [
           1
         ],
         "createdAt": "2016-04-10T01:02:57.515Z",
-        "photo_url" : "https://avatars.githubusercontent.com/u/13911839?v=3",
         "updatedAt": "2016-04-10T01:02:57.515Z",
         "id": 4
       },
       {
         "username": "darkfadr",
-        "photo_url" : "https://avatars.githubusercontent.com/u/4950673?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/4950673?v=3",
         "devpool": [
           1
         ],
@@ -100,42 +99,42 @@
       },
       {
         "username": "jalvarado91",
-        "photo_url" : "https://avatars.githubusercontent.com/u/1750392?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/1750392?v=3",
         "createdAt": "2016-04-10T07:52:42.690Z",
         "updatedAt": "2016-04-10T07:52:42.690Z",
         "id": 6
       },
       {
         "username": "mattohagan",
-        "photo_url" : "https://avatars.githubusercontent.com/u/6620918?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/6620918?v=3",
         "createdAt": "2016-04-10T09:44:44.227Z",
         "updatedAt": "2016-04-10T09:44:44.227Z",
         "id": 7
       },
       {
         "username": "ssoto65",
-        "photo_url" : "https://avatars.githubusercontent.com/u/17666615?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/17666615?v=3",
         "createdAt": "2016-04-10T09:45:08.082Z",
         "updatedAt": "2016-04-10T09:45:08.082Z",
         "id": 8
       },
       {
         "username": "bern422",
-        "photo_url" : "https://avatars.githubusercontent.com/u/3218456?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/3218456?v=3",
         "createdAt": "2016-04-10T09:45:27.710Z",
         "updatedAt": "2016-04-10T09:45:27.710Z",
         "id": 9
       },
       {
         "username": "kerlinmichel",
-        "photo_url" : "https://avatars.githubusercontent.com/u/15697692?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/15697692?v=3",
         "createdAt": "2016-04-10T09:45:49.437Z",
         "updatedAt": "2016-04-10T09:45:49.437Z",
         "id": 10
       },
       {
         "username": "jacobj",
-        "photo_url" : "https://avatars.githubusercontent.com/u/1075421?v=3",
+        "photo_url": "https://avatars.githubusercontent.com/u/1075421?v=3",
         "createdAt": "2016-04-10T09:46:18.075Z",
         "updatedAt": "2016-04-10T09:46:18.075Z",
         "id": 11
