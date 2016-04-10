@@ -45,6 +45,197 @@
         "createdAt": "2016-04-10T09:59:14.764Z",
         "updatedAt": "2016-04-10T09:59:14.764Z",
         "id": 48
+      },
+      {
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:28:54.239Z",
+        "updatedAt": "2016-04-10T10:40:55.364Z",
+        "id": 49,
+        "devpool_id": "1"
+      },
+      {
+        "username": "kennetpostigo",
+        "createdAt": "2016-04-10T10:37:40.895Z",
+        "updatedAt": "2016-04-10T10:37:40.895Z",
+        "id": 50
+      },
+      {
+        "username": "kennetpostigo",
+        "createdAt": "2016-04-10T10:38:31.250Z",
+        "updatedAt": "2016-04-10T10:38:31.250Z",
+        "id": 51
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:39:49.322Z",
+        "updatedAt": "2016-04-10T10:40:23.379Z",
+        "id": 52
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:35.876Z",
+        "updatedAt": "2016-04-10T10:41:35.876Z",
+        "id": 53
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:36.971Z",
+        "updatedAt": "2016-04-10T10:41:36.971Z",
+        "id": 54
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:45.265Z",
+        "updatedAt": "2016-04-10T10:41:45.265Z",
+        "id": 55
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:45.989Z",
+        "updatedAt": "2016-04-10T10:41:45.989Z",
+        "id": 56
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:46.153Z",
+        "updatedAt": "2016-04-10T10:41:46.153Z",
+        "id": 57
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:46.343Z",
+        "updatedAt": "2016-04-10T10:41:46.343Z",
+        "id": 58
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:46.502Z",
+        "updatedAt": "2016-04-10T10:41:46.502Z",
+        "id": 59
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:46.675Z",
+        "updatedAt": "2016-04-10T10:41:46.675Z",
+        "id": 60
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:46.903Z",
+        "updatedAt": "2016-04-10T10:41:46.903Z",
+        "id": 61
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:47.061Z",
+        "updatedAt": "2016-04-10T10:41:47.061Z",
+        "id": 62
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:47.241Z",
+        "updatedAt": "2016-04-10T10:41:47.241Z",
+        "id": 63
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:47.428Z",
+        "updatedAt": "2016-04-10T10:41:47.428Z",
+        "id": 64
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:47.624Z",
+        "updatedAt": "2016-04-10T10:41:47.624Z",
+        "id": 65
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:47.797Z",
+        "updatedAt": "2016-04-10T10:41:47.797Z",
+        "id": 66
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:47.963Z",
+        "updatedAt": "2016-04-10T10:41:47.963Z",
+        "id": 67
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:48.143Z",
+        "updatedAt": "2016-04-10T10:41:48.143Z",
+        "id": 68
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:48.347Z",
+        "updatedAt": "2016-04-10T10:41:48.347Z",
+        "id": 69
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:48.535Z",
+        "updatedAt": "2016-04-10T10:41:48.535Z",
+        "id": 70
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:48.719Z",
+        "updatedAt": "2016-04-10T10:41:48.719Z",
+        "id": 71
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:48.947Z",
+        "updatedAt": "2016-04-10T10:41:48.947Z",
+        "id": 72
+      },
+      {
+        "devpool_id": "1",
+        "username": "jacobj",
+        "createdAt": "2016-04-10T10:41:49.113Z",
+        "updatedAt": "2016-04-10T10:41:49.113Z",
+        "id": 73
+      },
+      {
+        "username": "kennetpostigo",
+        "createdAt": "2016-04-10T10:47:14.943Z",
+        "updatedAt": "2016-04-10T10:47:14.943Z",
+        "id": 74
+      },
+      {
+        "username": "kennetpostigo",
+        "createdAt": "2016-04-10T10:47:18.201Z",
+        "updatedAt": "2016-04-10T10:47:18.201Z",
+        "id": 75
+      },
+      {
+        "username": "kennetpostigo",
+        "createdAt": "2016-04-10T10:47:35.147Z",
+        "updatedAt": "2016-04-10T10:47:35.147Z",
+        "id": 76
       }
     ],
     "devpool": [
@@ -312,7 +503,7 @@
       "id": 11
     },
     "challenge": {
-      "id": 48
+      "id": 76
     },
     "challenge_devpool__devpool_challenges": {}
   }

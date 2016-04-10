@@ -48,6 +48,13 @@ module.exports = {
       });
   },
 
+  contributions(req, res){
+    Devpool.findOne(req.params.id || 1)
+      .populate('users')
+      .exec((err, pool) => {
+
+      });
+  },
 
   //commitACTIVITY
   stats(req, res){

@@ -47,6 +47,9 @@ module.exports.routes = {
   ***************************************************************************/
 
   'post /dashboard': 'UserController.dashboard',
+  'post /frequency': 'UserController.frequency',
+  'post /languages': 'UserController.languages',
+  'post /top-repos': 'UserController.topRepos',
   'get /user/events/:username': 'UserController.events',
   'get /followers/:username': 'UserController.followers',
 
