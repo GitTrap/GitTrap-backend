@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,16 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+  'post /dashboard': 'UserController.dashboard',
+  'get /user/events/:username': 'UserController.events',
+  // 'post /devpool/add': '',
+
+  'get /followers/:username': 'UserController.followers',
+
+  'get /github/:username' : 'GithubController.user',
+  'get /github/:username/repos': 'GithubController.repos',
+  'get /github/:username/stats/:repo': 'GithubController.stats'
+
 
 };

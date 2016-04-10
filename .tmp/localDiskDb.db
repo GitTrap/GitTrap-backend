@@ -1,27 +1,69 @@
 {
   "data": {
-    "user": [
+    "devpool": [
       {
-        "username": "darkfadr",
-        "first_name": "Ashley",
-        "last_name": "Narcisse",
-        "github_id": "github_fake_id",
-        "createdAt": "2016-04-09T15:25:10.465Z",
-        "updatedAt": "2016-04-09T15:25:10.465Z",
+        "name": "Trapathon Trappers",
+        "createdAt": "2016-04-09T17:32:30.592Z",
+        "updatedAt": "2016-04-09T17:32:30.592Z",
         "id": 1
       },
       {
-        "username": "kennetpostigo",
-        "first_name": "Kennet",
-        "last_name": "Postigo",
-        "github_id": "github_fake_id",
-        "createdAt": "2016-04-09T15:27:23.256Z",
-        "updatedAt": "2016-04-09T15:27:23.256Z",
+        "name": "Delta Force",
+        "createdAt": "2016-04-09T17:32:43.078Z",
+        "updatedAt": "2016-04-09T17:32:43.078Z",
+        "id": 2
+      }
+    ],
+    "user": [
+      {
+        "username": "jonycodes",
+        "devpool": "1",
+        "createdAt": "2016-04-09T17:41:36.611Z",
+        "updatedAt": "2016-04-09T17:41:36.611Z",
+        "id": 3
+      },
+      {
+        "username": "jonycodes",
+        "devpool": "1",
+        "createdAt": "2016-04-10T01:02:57.515Z",
+        "updatedAt": "2016-04-10T01:02:57.515Z",
+        "id": 4
+      }
+    ],
+    "devpool_users__user_devpools": [
+      {
+        "devpool_users": 1,
+        "user_devpools": 1,
+        "id": 1
+      },
+      {
+        "devpool_users": 2,
+        "user_devpools": 1,
         "id": 2
       }
     ]
   },
   "schema": {
+    "devpool": {
+      "name": {
+        "type": "string"
+      },
+      "playlist": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "user": {
       "first_name": {
         "type": "string"
@@ -47,10 +89,38 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "devpool_users__user_devpools": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "devpool_users": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "devpool",
+        "on": "id",
+        "via": "user_devpools"
+      },
+      "user_devpools": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "devpool_users"
+      }
     }
   },
   "counters": {
     "user": {
+      "id": 4
+    },
+    "devpool": {
+      "id": 2
+    },
+    "devpool_users__user_devpools": {
       "id": 2
     }
   }

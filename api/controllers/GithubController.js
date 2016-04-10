@@ -12,7 +12,6 @@
        debug: true,
        protocol: "https",
        host: "api.github.com", // should be api.github.com for GitHub
-       // pathPrefix: "/api/v3", // for some GHEs; none for GitHub
        timeout: 5000,
        headers: {
            "user-agent": "My-Cool-GitTrap-App" // GitHub is happy with a unique user agent
@@ -26,25 +25,27 @@ github.authenticate({
 });
 
 module.exports = {
-  test: function(req, res){
-    Devpool.find({})
-      .populate('users')
-      .exec((err, pools) => {
-        console.log(pools);
-        pools.forEach(pool => {
-          pool.users.map(user => {
-            var usr;
-            github.user.getFrom({
-                user: "darkfadr"
-            }, function(err, data) {
-              usr = data
-            });
-
-            return usr;
-          });
-        });
-        return pools;
-      });
+  user: function(req, res){
+    github.user.getFrom({
+      user: req.params.username || 'darkfadr'
+    }, (err, data) => {
+      res.json(data);
+    });
+  },
+  repos(req, res){
+    github.repos.getFromUser({
+      user: req.params.username || 'darkfadr'
+    }, (err, data) => {
+      res.json(data);
+    });
+  },
+  stats: function(req, res){
+    github.repos.getStatsCommitActivity({
+      user: req.params.username || 'darkfadr',
+      repo: req.params.repo || 'floridatechhack'
+    }, (err, data) => {
+      res.json(data);
+    });
   }
 };
 
