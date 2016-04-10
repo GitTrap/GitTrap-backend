@@ -27,38 +27,54 @@ github.authenticate({
 
 module.exports = {
   dashboard(req, res){
-    github.user.getFrom({
-      user: req.body.username || 'darkfadr'
-    }, (err, user) => {
-      github.events.getFromUser({
-        user: req.params.username || 'darkfadr'
-      }, (err, data) => {
-        var events = data.map(e => {
-          return {
-            id:e.id,
-            type:e.type,
-            actor:e.actor,
-            repo:e.repo,
-            payload:e.payload
-          };
-        });
-        user.activity_feed = events;
-        res.json({
-          login: user.login,
-          id: user.id,
-          avatar_url: user.avatar_url,
-          name: user.name,
-          location: user.location,
-          activity_feed: events
-        });
-      });
+    github.user.getFollowingFromUser({
+      user: req.params.username || 'darkfadr',
+      per_page: 5
+    }, (err, data) => {
+      var itr = 0,
+          stream = [],
+          followers = data.map(f => f.login);
 
-      // res.json(data);
+      function iterate(i){
+        github.events.getFromUser({
+          user: followers[i],
+          per_page: 3
+        }, (err, data) => {
+          data.map(e => {
+            return {
+              id:e.id,
+              type:e.type,
+              actor:e.actor,
+              repo:e.repo,
+              payload:e.payload
+            };
+          }).forEach(evnt => {
+            stream.push(evnt);
+          });
+
+          if (i === followers.length-1){
+            res.json(stream);
+          }
+        });
+      }
+
+      for(var i = 0; i < followers.length; i++){
+        iterate(i);
+      }
     });
   },
+
+
   leaderboards(req, res){
     res.json({hello: 'not yet implemented'})
   },
+
+  streaks(req, res){},
+
+  commits(req, res){},
+
+  contributions(req, res){},
+
   events(req, res){
     github.events.getFromUser({
       user: req.body.username || 'darkfadr'
@@ -76,15 +92,14 @@ module.exports = {
       res.json(events);
     });
   },
+
+
   followers(req, res){
     github.user.getFollowingFromUser({
       user: req.params.username || 'darkfadr'
     }, (err, data) => {
       res.json(data);
     })
-  },
-  top(req, res){
-
   }
 };
 
