@@ -12,19 +12,26 @@ var spotifyWebApi = require('spotify-web-api-node'),
     clientSecret: '8fe1488ddcf2408fa1e687ebf7925df2',
     redirectUri: 'http://localhost:1337/spotify/callback'
   }),
-  authorizeURL = spotifyApi.createAuthorizeURL(['user-read-private', 'user-read-email'], 'auth'),
-  defaultP,
-  playlistUser;
+  authorizeURL = spotifyApi.createAuthorizeURL(['user-read-private', 'user-read-email'], 'auth');
 
 module.exports = {
+
+	/**
+	 * redirects to authorization page
+	 *
+	 * @description :: gets the access token from spotify and sets the access token
+	 */
+
   auth: function(req, res) {
     res.redirect(authorizeURL);
   },
+
   /**
    * Call back function from spotify
    *
    * @description :: gets the access token from spotify and sets the access token
    */
+
   callback: function(req, res) {
     spotifyApi.authorizationCodeGrant(req.param('code'))
       .then(function(data) {
@@ -35,47 +42,68 @@ module.exports = {
         res.serverError();
       });
   },
+
   /**
    * Select playlist from user
    *
    * @description :: gets the current user and logs selects the playlists from the user
    */
+
   sPlaylist: function(req, res) {
     spotifyApi.getMe()
-      .then(function(data) {
-        playlistUser = data.id;
-        spotifyApi.getUserPlaylists(data.id)
-          .then(function(data) {
+      .then((data) => {
+        Devpool.update(1, {
+          playlist_owner: data.body.id
+        }).exec((err, obj) => {
+          if (err)
+            res.json(err);
+        });
+        spotifyApi.getUserPlaylists(data.body.id)
+          .then((data) => {
             res.json(data.body);
           }, function(err) {
-            res.send(err);
+            res.json(err);
           });
-      }, function(err) {
-        res.send('Coul not find user');
+      }, (err) => {
+        res.json(err);
       });
   },
+
   /**
    * sets playlist
    *
    * @description :: gets the current user and logs selects the playlists from the user
    */
+
   setPlaylist: function(req, res) {
-    defaultP = req.param('selected');
+    Devpool.update(1, {
+      playlist: req.params.playlist
+    }).exec((err, obj) => {
+      (err) ? res.json(err) : res.json("Success")
+    });
   },
+
   /**
    * return playlist
    *
    * @description :: gets the current user and logs selects the playlists from the user
    */
+
   getPlaylist: function(req, res) {
-    res.json(defaultP)
+    Devpool.findOne(1).exec((err, obj) => {
+      (err) ? res.json(err) : res.json(obj.playlist);
+    })
   },
+
   /**
    * return playlist user
    *
    * @description :: gets the current user and logs selects the playlists from the user
    */
+
   getPlaylistUser: function(req, res) {
-    res.json(playlistUser)
+    Devpool.findOne(1).exec((err, obj) => {
+			err ? res.json(err) : res.json(obj.playlist_owner);
+    })
   }
 };

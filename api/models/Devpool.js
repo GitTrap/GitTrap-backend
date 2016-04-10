@@ -18,6 +18,9 @@ module.exports = {
     playlist_owner: {
       type: 'string'
     },
+    challenges:{
+      type: 'string'
+    },
     users: {
       collection: 'user',
       via: 'devpools'

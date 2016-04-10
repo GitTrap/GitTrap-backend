@@ -48,7 +48,8 @@ module.exports.routes = {
 
   'get /github/:username' : 'GithubController.user',
   'get /github/:username/repos': 'GithubController.repos',
-  'get /github/commits/:repo': 'GithubController.commits'
+  'get /github/commits/:repo': 'GithubController.commits',
+  'get /spotify/setPlaylist/:playlist' : 'SpotifyController.setPlaylist'
 
 
 };
