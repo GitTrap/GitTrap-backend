@@ -1,11 +1,32 @@
 {
   "data": {
+    "challenge": [
+      {
+        "description": "Challenging Keney's noob ass",
+        "challenger": "Ash",
+        "challenges": "Kennet",
+        "null": "",
+        "createdAt": "2016-04-10T01:07:38.382Z",
+        "updatedAt": "2016-04-10T01:07:38.382Z",
+        "id": 1
+      },
+      {
+        "description": "Challenging Keney's noob ass",
+        "challenger": "Ash",
+        "challenges": "Kennet",
+        "createdAt": "2016-04-10T01:07:51.920Z",
+        "updatedAt": "2016-04-10T01:07:51.920Z",
+        "id": 2
+      }
+    ],
     "devpool": [
       {
         "name": "Trapathon Trappers",
         "createdAt": "2016-04-09T17:32:30.592Z",
-        "updatedAt": "2016-04-09T17:32:30.592Z",
-        "id": 1
+        "updatedAt": "2016-04-10T01:52:13.328Z",
+        "id": 1,
+        "playlist_owner": "darkfadr",
+        "playlist": "hhhhh"
       },
       {
         "name": "Delta Force",
@@ -30,25 +51,41 @@
         "id": 4
       }
     ],
-    "devpool_users__user_devpools": [
-      {
-        "devpool_users": 1,
-        "user_devpools": 1,
-        "id": 1
-      },
-      {
-        "devpool_users": 2,
-        "user_devpools": 1,
-        "id": 2
-      }
-    ]
+    "challenge_devpool__devpool_challenges": [],
+    "devpool_users__user_devpools": []
   },
   "schema": {
+    "challenge": {
+      "description": {
+        "type": "text"
+      },
+      "challenger": {
+        "type": "string"
+      },
+      "challengees": {
+        "type": "array"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "devpool": {
       "name": {
         "type": "string"
       },
       "playlist": {
+        "type": "string"
+      },
+      "playlist_owner": {
         "type": "string"
       },
       "id": {
@@ -90,6 +127,28 @@
         "type": "datetime"
       }
     },
+    "challenge_devpool__devpool_challenges": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "challenge_devpool": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "challenge",
+        "on": "id",
+        "via": "devpool_challenges"
+      },
+      "devpool_challenges": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "devpool",
+        "on": "id",
+        "via": "challenge_devpool"
+      }
+    },
     "devpool_users__user_devpools": {
       "id": {
         "primaryKey": true,
@@ -120,8 +179,10 @@
     "devpool": {
       "id": 2
     },
-    "devpool_users__user_devpools": {
+    "devpool_users__user_devpools": {},
+    "challenge": {
       "id": 2
-    }
+    },
+    "challenge_devpool__devpool_challenges": {}
   }
 }
