@@ -33,13 +33,13 @@ module.exports = {
    */
 
   callback: function(req, res) {
-    spotifyApi.authorizationCodeGrant(req.params.code)
+    spotifyApi.authorizationCodeGrant(req.param('code'))
       .then(function(data) {
         spotifyApi.setAccessToken(data.body.access_token);
         spotifyApi.setRefreshToken(data.body.refresh_token);
         res.redirect('/spotify/splaylist')
       }, function(err) {
-        res.serverError();
+        res.json(err);
       });
   },
 
