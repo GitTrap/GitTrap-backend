@@ -15,10 +15,16 @@ module.exports = {
     playlist: {
       type: 'string'
     },
+    playlist_owner: {
+      type: 'string'
+    },
+    challenges:{
+      collection : 'challenge',
+      via: 'devpool'
+    },
     users: {
       collection: 'user',
       via: 'devpools'
     }
   }
 };
-

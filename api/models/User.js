@@ -17,6 +17,9 @@ module.exports = {
     username: {
       type: 'string',
     },
+    avatar: {
+      type: 'string'
+    },
     github_id: {
       type: 'string'
     },

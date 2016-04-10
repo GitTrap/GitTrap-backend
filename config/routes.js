@@ -48,13 +48,15 @@ module.exports.routes = {
 
   'post /dashboard': 'UserController.dashboard',
   'get /user/events/:username': 'UserController.events',
-  // 'post /devpool/add': '',
-
   'get /followers/:username': 'UserController.followers',
+
+  'post /devpool/add': 'DevpoolCotroller.add',
 
   'get /github/:username' : 'GithubController.user',
   'get /github/:username/repos': 'GithubController.repos',
-  'get /github/:username/stats/:repo': 'GithubController.stats'
+  // 'get /github/commits/:repo': 'GithubController.commits',
+  'get /github/:username/stats/:repo': 'GithubController.stats',
+  'get /Spotify/setPlaylist/:playlist' : 'SpotifyController.setPlaylist'
 
 
 };
