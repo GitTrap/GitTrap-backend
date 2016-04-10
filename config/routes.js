@@ -48,9 +48,9 @@ module.exports.routes = {
 
   'post /dashboard': 'UserController.dashboard',
   'get /user/events/:username': 'UserController.events',
-  // 'post /devpool/add': '',
-
   'get /followers/:username': 'UserController.followers',
+
+  'post /devpool/add': 'DevpoolCotroller.add',
 
   'get /github/:username' : 'GithubController.user',
   'get /github/:username/repos': 'GithubController.repos',

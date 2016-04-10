@@ -2,34 +2,67 @@
   "data": {
     "challenge": [
       {
-        "description": "Challenging Keney's noob ass",
-        "challenger": "Ash",
-        "challenges": "Kennet",
-        "null": "",
-        "createdAt": "2016-04-10T01:07:38.382Z",
-        "updatedAt": "2016-04-10T01:07:38.382Z",
-        "id": 1
+        "goalOne": "20 commits",
+        "goalTwo": "5 day streak",
+        "goalThree": "2 contributions",
+        "challengees": [
+          "jonycodes",
+          "kennetpostigo",
+          null,
+          null
+        ],
+        "createdAt": "2016-04-10T09:45:23.018Z",
+        "updatedAt": "2016-04-10T09:45:23.018Z",
+        "id": 46
       },
       {
-        "description": "Challenging Keney's noob ass",
-        "challenger": "Ash",
-        "challenges": "Kennet",
-        "createdAt": "2016-04-10T01:07:51.920Z",
-        "updatedAt": "2016-04-10T01:07:51.920Z",
-        "id": 2
+        "goalOne": "200 commits",
+        "goalTwo": "5 day streak",
+        "goalThree": "2 contributions",
+        "challengees": [
+          "jonycodes",
+          "kennetpostigo",
+          null,
+          null,
+          null
+        ],
+        "createdAt": "2016-04-10T09:48:58.315Z",
+        "updatedAt": "2016-04-10T09:48:58.315Z",
+        "id": 47
+      },
+      {
+        "goalOne": "200 commit",
+        "goalTwo": "7 day streak",
+        "goalThree": "4 contributions",
+        "challengees": [
+          "jonycodes",
+          "kennetpostigo",
+          null,
+          null,
+          null,
+          null
+        ],
+        "createdAt": "2016-04-10T09:59:14.764Z",
+        "updatedAt": "2016-04-10T09:59:14.764Z",
+        "id": 48
       }
     ],
     "devpool": [
       {
         "name": "Trapathon Trappers",
         "createdAt": "2016-04-09T17:32:30.592Z",
-        "updatedAt": "2016-04-10T01:52:13.328Z",
+        "updatedAt": "2016-04-10T09:46:18.097Z",
         "id": 1,
+        "users": [
+          4,
+          5
+        ],
         "playlist_owner": "darkfadr",
         "playlist": "hhhhh"
       },
       {
         "name": "Delta Force",
+        "users": [],
         "createdAt": "2016-04-09T17:32:43.078Z",
         "updatedAt": "2016-04-09T17:32:43.078Z",
         "id": 2
@@ -38,21 +71,114 @@
     "user": [
       {
         "username": "jonycodes",
-        "devpool": "1",
+        "devpool": [],
         "createdAt": "2016-04-09T17:41:36.611Z",
         "updatedAt": "2016-04-09T17:41:36.611Z",
         "id": 3
       },
       {
-        "username": "jonycodes",
-        "devpool": "1",
+        "username": "kennetpostigo",
+        "devpool": [
+          1
+        ],
         "createdAt": "2016-04-10T01:02:57.515Z",
         "updatedAt": "2016-04-10T01:02:57.515Z",
         "id": 4
+      },
+      {
+        "username": "darkfadr",
+        "devpool": [
+          1
+        ],
+        "createdAt": "2016-04-10T06:11:39.378Z",
+        "updatedAt": "2016-04-10T06:11:39.378Z",
+        "id": 5
+      },
+      {
+        "username": "jalvarado91",
+        "createdAt": "2016-04-10T07:52:42.690Z",
+        "updatedAt": "2016-04-10T07:52:42.690Z",
+        "id": 6
+      },
+      {
+        "username": "mattohagan",
+        "createdAt": "2016-04-10T09:44:44.227Z",
+        "updatedAt": "2016-04-10T09:44:44.227Z",
+        "id": 7
+      },
+      {
+        "username": "soto61",
+        "createdAt": "2016-04-10T09:45:08.082Z",
+        "updatedAt": "2016-04-10T09:45:08.082Z",
+        "id": 8
+      },
+      {
+        "username": "bern422",
+        "createdAt": "2016-04-10T09:45:27.710Z",
+        "updatedAt": "2016-04-10T09:45:27.710Z",
+        "id": 9
+      },
+      {
+        "username": "kerlinmichel",
+        "createdAt": "2016-04-10T09:45:49.437Z",
+        "updatedAt": "2016-04-10T09:45:49.437Z",
+        "id": 10
+      },
+      {
+        "username": "jacobj",
+        "createdAt": "2016-04-10T09:46:18.075Z",
+        "updatedAt": "2016-04-10T09:46:18.075Z",
+        "id": 11
       }
     ],
     "challenge_devpool__devpool_challenges": [],
-    "devpool_users__user_devpools": []
+    "devpool_users__user_devpools": [
+      {
+        "user_devpools": 4,
+        "devpool_users": 1,
+        "id": 3
+      },
+      {
+        "user_devpools": 5,
+        "devpool_users": 1,
+        "id": 4
+      },
+      {
+        "user_devpools": 3,
+        "devpool_users": 1,
+        "id": 5
+      },
+      {
+        "user_devpools": 6,
+        "devpool_users": 1,
+        "id": 6
+      },
+      {
+        "user_devpools": 7,
+        "devpool_users": 1,
+        "id": 7
+      },
+      {
+        "user_devpools": 8,
+        "devpool_users": 1,
+        "id": 8
+      },
+      {
+        "user_devpools": 9,
+        "devpool_users": 1,
+        "id": 9
+      },
+      {
+        "user_devpools": 10,
+        "devpool_users": 1,
+        "id": 10
+      },
+      {
+        "user_devpools": 11,
+        "devpool_users": 1,
+        "id": 11
+      }
+    ]
   },
   "schema": {
     "challenge": {
@@ -109,6 +235,9 @@
         "type": "string"
       },
       "username": {
+        "type": "string"
+      },
+      "avatar": {
         "type": "string"
       },
       "github_id": {
@@ -174,14 +303,16 @@
   },
   "counters": {
     "user": {
-      "id": 4
+      "id": 11
     },
     "devpool": {
       "id": 2
     },
-    "devpool_users__user_devpools": {},
+    "devpool_users__user_devpools": {
+      "id": 11
+    },
     "challenge": {
-      "id": 2
+      "id": 48
     },
     "challenge_devpool__devpool_challenges": {}
   }

@@ -31,6 +31,7 @@ module.exports = {
       user: req.params.username || 'darkfadr',
       per_page: 5
     }, (err, data) => {
+      err && res.json({err});
       var itr = 0,
           stream = [],
           followers = data.map(f => f.login);
@@ -63,7 +64,6 @@ module.exports = {
       }
     });
   },
-
 
   leaderboards(req, res){
     res.json({hello: 'not yet implemented'})
