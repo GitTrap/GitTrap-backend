@@ -16,18 +16,22 @@ module.exports = {
         "cvc": req.body.cvc
       }
     }, (err, token) => {
-      stripe.charges.create({
+      if(err){
+        console.log("ERROR " + err);
+      }
+      else{stripe.charges.create({
         amount: 50,
         currency: "usd",
         source: token.id, // obtained with Stripe.js
         description: "Charge"
       }, (err, charge) => {
         if (err) {
-          console.log(err);
+          console.log("ERROR " + err);
         } else {
           Challenge.findOne({
             username: req.body.username
           }).exec((err, obj) => {
+            console.log(obj.retrieves);
             retrieve = obj.retrieves ? obj.retrieves : [];
             Challenge.update({
               username: req.body.username
@@ -38,7 +42,7 @@ module.exports = {
             })
           });
         }
-      })
+      })}
     });
     res.send()
   },

@@ -6,8 +6,12 @@
  */
 
 module.exports = {
-    getChallenge: function(req, res){
-        
-    }
+  getChallenge: function(req, res) {
+    Challenge.findOne({
+      username: req.body.username
+    }).exec((err, obj) => {
+      (err) ? res.json(err): res.json(obj);
+    })
+  }
 
 };
